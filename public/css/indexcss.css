@@ -1,0 +1,72 @@
+.main-container{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 50%;
+    
+   
+    
+    justify-content: center;
+}
+
+.navbar{
+
+    display: flex;
+    flex-direction: row;
+}
+h3{
+    margin-top: -2px;
+    margin-right: 1350px;
+}
+
+*{
+    font-family: cursive;
+}
+.table-container{
+   border-color: rgb(233, 221, 209);
+    margin-right: 25px;
+    width: 500px;
+    justify-content: center;
+    background-color: rgb(233, 221, 209);
+    
+}
+table {
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+  }
+ 
+
+#table1{
+
+    width: 450px;
+    margin-left: 10px;
+}
+h2
+{
+    margin-left: 10px;
+}
+.input-container{
+
+    margin-left: 4px;
+}
+textarea{
+    border-color: white ;
+}
+textarea:hover
+{
+    border-color: white;
+}
+button{
+    margin-left: 30px;
+    width: 70px;
+
+}
+
+h4
+{
+   margin-top: 23px;
+   margin-left: 2px;
+    margin-right: 55px;
+}

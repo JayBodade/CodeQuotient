@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/indexcss.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <span>
+           
+   <h3>Hi,<span id="username"><%=name1 %> </span></h3>
+
+        </span>
+        <span>
+            <form action="/logout" method="post">
+           <button type="submit" id="logout">logout</button>
+
+        </form>
+        </span>
+
+    </div>
+    <div class="main-container">
+    <div class="table-container">
+        <h2 >TASK LIST</h2>
+    <table id="table1">
+
+       
+         <%todos.forEach(function(element){%>
+            
+            <tr>
+            <td><%= element.task.data %> </td>
+            <td><input type="checkbox"></td>
+            <td>
+                <form action="sendToUpdate" method="post">
+                <button  type="submit" id="editButton" name="idToUpdate"value="<%=element.task.id %> ">edit</button>
+            </form>
+            </td>
+            <td><form action="/delTodo" method="post" >
+                <button type="submit"  name="delete" value= "<%=element.task.id %>" >delete</button>
+            </form>
+            </td>
+           
+        </tr>
+            <% })%>
+    
+        
+        
+    </table>
+
+    </div>
+    <div class="input-container">
+        <form action="/addTodo" method="post">
+        <textarea name="task" id="text-area" cols="30" rows="10" placeholder="Enter Text here"></textarea>
+        <button type="submit">submit</button>
+    </form>
+
+    </div>
+ <!-- <script src="/public/js/MyScript.js" type="text/javascript"></script> -->
+ <!-- <script src="/public/js/index.js"  type="text/javascript"> -->
+  
+ </script> 
+ 
+</div>
+</body>
+</html>
